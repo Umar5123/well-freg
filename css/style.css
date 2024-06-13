@@ -1,0 +1,1244 @@
+@media screen and (min-width:320px) {
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body {
+        line-height: 1;
+        font-family: 'Open Sans';
+        font-weight: normal;
+        color: #000;
+        font-size: 16px;
+    }
+    li {
+        list-style: none;
+    }
+    a {
+        text-decoration: none;
+        display: inline-block;
+    }
+    .container {
+        max-width: 1080px;
+        margin: 0 auto;
+        width: 100%;
+        padding: 0 15px;
+    }
+    .default-heading {
+        font-size: 25px;
+        padding: 0 10px;
+        font-family: 'Trajan Pro';
+        font-weight: bold;
+        color: #1F3B71;
+    }
+    .default-SubHeading {
+        color: #808285;
+        font-weight: 300;
+        font-size: 25px;
+        text-align: center;
+        display: block;
+        font-family: 'Open Sans Condensed';
+        letter-spacing: 6px;
+    }
+    .default-btn {
+        background-color: #4572C7;
+        font-size: 16px;
+        color: #fff;
+        font-weight: 300;
+        padding: 19px 10px;
+        max-width: fit-content;
+        display: block;
+        margin: 0 auto;
+        transition: all .3s ease;
+    }
+    .default-para {
+        font-size: 16px;
+        color: #4d4d4d;
+        line-height: 30px;
+        text-align: center;
+        font-weight: 400;
+        font-family: 'Open Sans';
+    }
+    img {
+        cursor: pointer;
+    }
+    /* Fonts ******************************/
+    @font-face {
+        font-family: 'Open Sans';
+        src: url('../fonts/OpenSans-Regular.woff2') format('woff2'),
+            url('../fonts/OpenSans-Regular.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+    @font-face {
+        font-family: 'Open Sans';
+        src: url('../fonts/OpenSans-Bold.woff2') format('woff2'),
+            url('../fonts/OpenSans-Regular.woff') format('woff');
+        font-weight: bold;
+        font-style: normal;
+        font-display: swap;
+    }
+    @font-face {
+        font-family: 'Trajan Pro';
+        src: url('../fonts/TrajanPro-Bold.woff2') format('woff2'),
+            url('../fonts/TrajanPro-Bold.woff') format('woff');
+        font-weight: bold;
+        font-style: normal;
+        font-display: swap;
+    }
+    @font-face {
+        font-family: 'Bebas Neue';
+        src: url('../BebasNeue-Regular.woff2') format('woff2'),
+            url('../BebasNeue-Regular.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+    @font-face {
+        font-family: 'Open Sans Condensed';
+        src: url('../OpenSansCondensed-Light.woff2') format('woff2'),
+            url('../OpenSansCondensed-Light.woff') format('woff');
+        font-weight: 300;
+        font-style: normal;
+        font-display: swap;
+    }
+    @font-face {
+        font-family: 'Open Sans';
+        src: url('../OpenSans-Italic.woff2') format('woff2'),
+            url('../OpenSans-Italic.woff') format('woff');
+        font-weight: normal;
+        font-style: italic;
+        font-display: swap;
+    }
+    /* header ********************/
+    header {
+        background-color: #ffff;
+        position: relative;
+        padding: 15px 0;
+    }
+    header .container {
+        max-width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+    }
+    .logo {
+        max-width: 220px;
+    }
+    .logo img {
+        width: 100%;
+    }
+    nav {
+        max-width: 755px;
+        width: 100%;
+    }
+    nav ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    nav ul li a {
+        color: #1F3B71;
+        font-size: 18px;
+        font-weight: normal;
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    header .phone {
+        color: #1F3B71;
+        font-size: 24px;
+        font-weight: bold;
+        border-left: 3px solid #808285;
+        padding: 10px 0 10px 30px;
+        display: none;
+    }
+    /* Drop Down ****************/
+    nav ul li {
+        position: relative;
+        width: 100%;
+        border-bottom: 1px solid #ddd;
+    }
+    nav ul li ul {
+        position: static;
+        left: 0;
+        top: 100%;
+        width: 200px;
+        background-color: rgb(255, 255, 255);
+        display: none;
+    }
+    nav .drop-down li {
+        width: 100%;
+        border-top: 1px solid #ffffff61;
+        background-color: #ddd;
+    }
+    nav .drop-down li:hover i {
+        transform: rotate(360deg);
+    }
+    nav .drop-down a {
+        padding: 15px 27px;
+        transition: all .3s;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    nav .drop-down a:hover {
+        background: #1F3B71;
+        color: #ffffff;
+    }
+    nav .sub-dropDown {
+        left: 200px;
+        top: 0;
+    }
+    nav .drop-down i {
+        transform: rotate(-90deg);
+    }
+    nav ul li:hover>ul {
+        display: initial;
+        transition: top .3s;
+    }
+    /********* Responsive Toggle Btn**********/
+    header .toggle-btn {
+        position: relative;
+        width: 25px;
+        height: 3px;
+        background: #1F3B71;
+        display: block;
+        flex-shrink: 0;
+    }
+    header .toggle-btn::after,
+    header .toggle-btn::before {
+        position: absolute;
+        content: "";
+        height: 3px;
+        display: block;
+        background: #1F3B71;
+        left: 0;
+        right: 0;
+        transition: all .3s;
+    }
+    header .toggle-btn::after {
+        top: 8px;
+    }
+    header .toggle-btn::before {
+        bottom: 8px;
+    }
+    header .toggle-open::after,
+    header .toggle-open::before {
+        content: "";
+        background: #1F3B71;
+        display: block;
+        position: absolute;
+        top: -4px;
+        transition: all .3s;
+    }
+    header .toggle-open::after {
+        transform: rotate(50deg);
+    }
+    header .toggle-open::before {
+        transform: rotate(-50deg);
+    }
+    nav {
+        display: block;
+        height: 100vh;
+        position: absolute;
+        top: 100%;
+        right: 100%;
+        background: #ffffff;
+        transition: all .3s;
+        max-width: 100%;
+        z-index: 9;
+    }
+    .nav-show {
+        right: 0%;
+        border-top: 1px solid #ddd;
+    }
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        right: 100%;
+    }
+    header .toggle-open {
+        visibility: hidden;
+    }
+    header .toggle-open::before,
+    header .toggle-open::after {
+        visibility: visible;
+    }
+    /********* Responsive Toggle Button**********/
+    /* End Drop Down ****************/
+    /* End Header *******************************/
+    .banner {
+        background: url(../images/mobilBanner.png) no-repeat;
+        height: calc(70vh - 84px);
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+    .mobile-content {
+        width: 100%;
+        display: block;
+        position: absolute;
+        bottom: 0;
+    }
+    .mobile-content h2 {
+        font-size: 22px;
+        color: #fff;
+        text-align: center;
+        margin-bottom: 10px;
+        padding: 0 10px;
+        line-height: 1.3;
+    }
+    .mobile-content span {
+        font-size: 18px;
+        color: #fff;
+        font-family: 'Trajan Pro';
+        font-weight: bold;
+        display: block;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .mobile-content .mobile-link {
+        font-size: 12px;
+        color: #fff;
+        font-weight: 500;
+        background-color: #808285;
+        padding: 10px 20px;
+        width: 100%;
+        text-align: center;
+    }
+    .mobile-btn {
+        display: block;
+        width: 100%;
+        background: #1F3B71;
+    }
+    .mobile-btn ul {
+        display: flex;
+        justify-content: space-between;
+    }
+    .mobile-btn ul li {
+        display: flex;
+        justify-content: center;
+        width: 33%;
+        transition: all .3s;
+    }
+    .mobile-btn ul li:hover{
+        background-color: #4572C7;
+    }
+    .mobile-btn ul li a {
+        display: flex;
+        color: #fff;
+        font-size: 14px;
+        line-height: 42px;
+    }
+    .mobile-btn ul li:not(:last-child) {
+        border-right: 1px solid #ffffff61;
+    }
+    .banner-data {
+        max-width: 760px;
+        width: 100%;
+        display: none;
+    }
+    .banner h1 {
+        font-size: 24px;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 18px;
+    }
+    .bannner-info{
+        padding-left: 64px;
+    }
+    .banner .lawyers {
+        color: #1F3B71;
+        font-size: 40px;
+        font-family: 'Trajan Pro';
+        font-weight: bold;
+        margin-bottom: 30px;
+        display: block;
+    }
+    .banner .default-para {
+        color: #FEFCF8;
+        letter-spacing: 1.3px;
+        margin-bottom: 30px;
+    }
+    .banner .default-btn {
+        max-width: 235px;
+        width: 100%;
+        text-align: center;
+        border-radius: 20px;
+        margin-bottom: 26px;
+        line-height: 1.2;
+        padding: 12px 10px;
+        transition: all .3s;
+    }
+    .banner .default-btn:hover {
+        background-color: black;
+    }
+    .banner-btn {
+        font-weight: bold;
+        display: block;
+    }
+    .banner .legalAction {
+        font-style: italic;
+        text-align: center;
+        color: #fff;
+        display: block;
+        margin-bottom: 60px;
+    }
+    .banner-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+    .banner-content {
+        width: 28%;
+    }
+    .dollar {
+        color: #1F3B71;
+        font-size: 48px;
+        font-family: 'Bebas Neue';
+        font-weight: bold;
+    }
+    .banner .settlementAmount {
+        font-size: 48px;
+        font-family: 'Bebas Neue';
+        letter-spacing: 1.2px;
+        font-weight: bold;
+        color: #fff;
+        line-height: 1.2;
+    }
+    .banner .legalSettlement {
+        color: #fff;
+        text-align: center;
+        display: block;
+        line-height: 1.4;
+    }
+    .banner .down-arrow {
+        font-size: 20px;
+        color: #fff;
+        animation: down 1.5s infinite;
+        display: block;
+        text-align: center;
+    }
+    @keyframes down {
+        0% {
+            transform: translate(0, 0);
+        }
+        50% {
+            transform: translate(0, 10px);
+        }
+        100% {
+            transform: translate(0, 0);
+        }
+    }
+    /* personal-injury *******************/
+    .personal-injury {
+        padding: 50px 0 70px 0;
+    }
+    .personal-injury .injury-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        row-gap: 100px;
+    }
+    .personal-injury .container {
+        /* max-width: 1222px;
+        margin: 0 0 0 auto; */
+        max-width: 100%;
+        margin: 0;
+        padding-left: 20px;
+    }
+    .injury-data {
+        max-width: 100%;
+    }
+    .personal-injury .default-para {
+        text-align: left;
+    }
+    .personal-injury .default-para:not(:last-child) {
+        margin: 30px 0 20px 0;
+    }
+    .injury-thumbnail {
+        max-width: 588px;
+    }
+    .injury-thumbnail img {
+        width: 100%;
+    }
+    .injury-info {
+        max-width: 680px;
+    }
+    .personal-injury h2 {
+        font-size: 30px;
+        text-align: center;
+        font-family: 'Trajan Pro';
+        font-weight: bold;
+        color: #1F3B71;
+        margin-bottom: 15px;
+    }
+    .personal-injury .default-SubHeading {
+        margin-bottom: 15px;
+    }
+    .injury-subtitle {
+        color: #1F3B71;
+        font-size: 16px;
+        font-family: 'Trajan Pro';
+        font-weight: 300;
+        text-align: center;
+        display: block;
+        position: relative;
+    }
+    .injury-subtitle::before {
+        content: "";
+        position: absolute;
+        border: 2px solid #E4E8EA;
+        width: 100%;
+        left: -73%;
+        top: 50%;
+        transform: translateY(-50%);
+        display: none;
+    }
+    .injury-images {
+        position: relative;
+    }
+    .animated-image {
+        position: absolute;
+        top: -100px;
+        z-index: -1;
+        max-width: 515px;
+    }
+    .animated-image img {
+        width: 100%;
+    }
+    /* services ************************/
+    .services {
+        padding: 30px 0 40px;
+        position: relative;
+    }
+    .services::after {
+        content: "";
+        position: absolute;
+        border: 1px solid #E4E8EA;
+        top: 34%;
+        left: 0;
+        right: 0;
+        display: none;
+    }
+    .services .container {
+        display: block;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .services .services-card {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+    .card-image {
+        max-width: 228px;
+        height: 105px;
+        margin: 0 auto 15px auto;
+        max-width: fit-content;
+        display: block;
+    }
+    .card-image img {
+        width: 100%;
+    }
+    .services-card .default-para {
+        position: relative;
+    }
+    .services-card .default-para::after {
+        content: "";
+        position: absolute;
+        border: 1px solid #808285;
+        width: 25px;
+        top: -35px;
+        rotate: 90deg;
+        left: 50%;
+        right: 0;
+        z-index: 1;
+        transform: translate(10px, 10px);
+        display: none;
+    }
+    /* practice-area ****************/
+    .practice-area {
+        padding: 50px 0;
+        background-color: #E4E8EA;
+        position: relative;
+    }
+    .practice-area .default-heading {
+        line-height: 1.3;
+        overflow: hidden;
+        text-align: center;
+    }
+    .practice-area .default-heading::before,
+    .practice-area .default-heading::after {
+        background-color: #FEFCF8;
+        content: "";
+        display: inline-block;
+        height: 3px;
+        position: relative;
+        vertical-align: middle;
+        width: 50%;
+        display: none;
+    }
+    .practice-area .default-heading::before {
+        right: 8px;
+        margin-left: -50%;
+    }
+    .practice-area .default-heading::after {
+        left: 8px;
+        margin-right: -50%;
+    }
+    .practice-area .default-SubHeading {
+        text-align: center;
+        margin-bottom: 35px;
+    }
+    .practice-area .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        row-gap: 15px;
+        position: relative;
+    }
+    .practice-area .container::after {
+        content: "";
+        position: absolute;
+        border: 1px solid #FEFCF8;
+        width: 100%;
+        opacity: 50%;
+        display: none;
+    }
+    .practice-card {
+        transition: all .3s ease;
+        position: relative;
+        max-width: 100%;
+        padding: 0 10px;
+    }
+    .practice-card .practice-image {
+        width: 45px;
+        height: 45px;
+        object-fit: contain;
+        margin: 0 auto 20px auto;
+    }
+    .practice-card h3 {
+        font-size: 18px;
+        text-align: center;
+        font-family: 'Trajan Pro';
+        font-weight: bold;
+        color: #1F3B71;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        letter-spacing: -1px;
+    }
+    .practice-card .default-para {
+        line-height: 24px;
+        color: #444444;
+        transition: all .3s ease;
+        margin-bottom: 15px;
+    }
+    .practice-card .default-btn:hover {
+        background-color: #1F3B71;
+        color: #fff;
+    }
+    .practice-card .default-btn {
+        max-width: 133px;
+        width: 100%;
+        padding: 20px 8px;
+        background-color: transparent;
+        border-radius: 20px;
+        border: 2px solid #1F3B71;
+        text-align: center;
+        font-size: 14px;
+        font-weight: bold;
+        font-style: italic;
+        color: #1F3B71;
+        transition: all .3s ease;
+        visibility: visible;
+        opacity: 1;
+        margin: 0 auto;
+    }
+    /* Help Section **************************/
+    .help-section {
+        padding: 0;
+        background: url(../images/helpbg.png) no-repeat;
+        position: relative;
+        z-index: -2;
+        background-position: center;
+        background-size: cover;
+        overflow: hidden;
+    }
+    .help-info {
+        position: relative;
+        padding: 50px 0;
+    }
+    .help-info::after {
+        content: "";
+        background-color: #FEFCF8;
+        transform: rotate(0deg);
+        margin: 0 auto;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        width: 100%;
+        display: inline-block;
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        height: 100%;
+    }
+    .help-section .quote-snippet {
+        width: 100%;
+    }
+    .help-section .quote-snippet {
+        border-left: 2px solid #dddd;
+        padding-left: 10px;
+    }
+    .quote-snippet .default-para {
+        color: #444444;
+        font-weight: 300;
+        font-style: italic;
+        font-size: 24px;
+    }
+    .help-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        flex-direction: column;
+    }
+    .help-section .default-heading {
+        text-align: center;
+    }
+    .help-section .default-SubHeading {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .help-info .default-para {
+        text-align: left;
+    }
+    .help-info .default-para:not(:last-child) {
+        margin-bottom: 20px;
+    }
+    .services .slick-dots,
+    .practice-area .slick-dots {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin: 20px auto 0 auto;
+    }
+    .services .slick-dots li button,
+    .practice-area .slick-dots li button {
+        width: 13px;
+        height: 13px;
+        background-color: #808285;
+        border: none;
+        transition: background-color 0.3s ease;
+        text-indent: -9999px;
+        border-radius: 50%;
+    }
+    .services .slick-dots li.slick-active button,
+    .practice-area .slick-dots li.slick-active button {
+        background-color: #1F3B71;
+    }
+    .attorneyLaw {
+        position: absolute;
+        bottom: -16%;
+        right: 16%;
+        display: none;
+    }
+    .rotateImage .rotate {
+        animation: rotateImage 15s linear infinite;
+        margin: 20px;
+        filter: brightness(0.1);
+    }
+    @keyframes rotateImage {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    .rotateImage {
+        display: inline-block;
+        position: relative;
+    }
+    .fixedImage {
+        position: absolute;
+        right: 60px;
+        top: 66px;
+    }
+
+}
+
+/******** 767 **************************************/
+@media screen and (min-width:767px) {
+    .banner {
+        background: url(../images/banner.png) no-repeat center/cover;
+        background-position: 75% center;
+        height: calc(100vh - 84px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .banner .lawyers {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+    .bannner-info{
+        padding-left: 0;
+    }
+    .banner-data {
+        max-width: 60%;
+        width: 100%;
+        display: block;
+    }
+    .banner h1 {
+        font-size: 20px;
+    }
+    .banner .default-para {
+        margin-bottom: 30px;
+        text-align: left;
+    }
+    .practice-card .default-btn {
+        max-width: 165px;
+        width: 100%;
+        padding: 20px 8px;
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        top: 70%;
+        left: 0;
+        transform: translateY(-70%);
+        right: 0;
+    }
+    .practice-card:hover .default-para {
+        visibility: hidden;
+        opacity: 0;
+    }
+    .practice-card:hover .default-btn {
+        visibility: visible;
+        opacity: 1;
+    }
+    .default-heading {
+        padding: 0;
+    }
+    .default-btn {
+        margin: 0;
+    }
+    .banner .legalAction {
+        text-align: left;
+    }
+    .mobile-content {
+        display: none;
+    }
+    .logo {
+        max-width: 263px;
+    }
+    .personal-injury .container {
+        padding-left: 20px;
+    }
+    .personal-injury .injury-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .personal-injury .default-para:not(:last-child) {
+        margin: 30px 0 20px 0;
+    }
+    .default-para {
+        font-size: 14px;
+    }
+    .animated-image {
+        top: -100px;
+    }
+    .personal-injury h2 {
+        font-size: 46px;
+        text-align: left;
+        margin-bottom: 0;
+    }
+    .default-SubHeading {
+        font-size: 38px;
+        text-align: left;
+        letter-spacing: 12.4px;
+    }
+    .injury-subtitle {
+        font-size: 24px;
+        text-align: right;
+        position: relative;
+    }
+    .attorneyLaw {
+        display: block;
+    }
+    .help-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        margin-bottom: 60px;
+    }
+    .help-section .quote-snippet {
+        max-width: 380px;
+        width: 100%;
+        padding-left: 10px;
+    }
+    .help-section .default-heading {
+        text-align: left;
+    }
+    .help-info .default-para {
+        text-align: left;
+    }
+    .help-section .default-SubHeading {
+        text-align: left;
+        margin-bottom: 0;
+    }
+    .injury-subtitle::before {
+        content: "";
+        position: absolute;
+        border: 2px solid #E4E8EA;
+        width: 100%;
+        left: -73%;
+        top: 50%;
+        transform: translateY(-50%);
+        display: block;
+    }
+    .personal-injury {
+        padding: 110px 0 150px 0;
+    }
+    .services .services-card {
+        max-width: 23%;
+    }
+    .practice-card {
+        max-width: 23%;
+    }
+    .practice-area .default-heading::before,
+    .practice-area .default-heading::after {
+        background-color: #FEFCF8;
+        content: "";
+        display: inline-block;
+        height: 3px;
+        position: relative;
+        vertical-align: middle;
+        width: 50%;
+    }
+    .practice-area .default-heading::before {
+        right: 8px;
+        margin-left: -50%;
+    }
+    .practice-area .default-heading::after {
+        left: 8px;
+        margin-right: -50%;
+    }
+    .services .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .practice-area {
+        padding: 95px 0 160px;
+        background-color: #E4E8EA;
+    }
+    .services {
+        padding: 30px 0 100px;
+        position: relative;
+    }
+    .practice-area .default-SubHeading {
+        text-align: center;
+        margin-bottom: 85px;
+    }
+    .help-info {
+        position: relative;
+        padding: 100px 0 100px;
+    }
+    .help-info .default-para:not(:last-child) {
+        margin-bottom: 45px;
+    }
+    .attorneyLaw {
+        position: absolute;
+        bottom: -10%;
+        right: 8%;
+    }
+    .help-info::after {
+        content: "";
+        transform: rotate(0deg);
+    }
+
+}
+/*** 992 *************************************/
+@media screen and (min-width:992px) {
+    nav {
+        max-width: 560px;
+    }
+    .logo {
+        max-width: 220px;
+    }
+    nav ul {
+        padding: 0;
+    }
+    nav ul li a {
+        font-size: 16px;
+        display: block;
+        padding: 33px 0;
+    }
+    nav ul li ul {
+        position: absolute;
+    }
+    nav .drop-down a {
+        padding: 15px 10px;
+    }
+    header .phone {
+        font-size: 18px;
+        padding: 12px 0 12px 15px;
+        display: block;
+    }
+    header .toggle-btn {
+        display: none;
+    }
+    nav {
+        display: block;
+        height: auto;
+        position: static;
+        background: #ffffff;
+        z-index: 9;
+    }
+    nav ul {
+        display: flex;
+        flex-direction: row;
+    }
+    header {
+        padding: 0 0;
+    }
+    nav ul li {
+        width: unset;
+        border: 0;
+    }
+    nav .drop-down li {
+        background-color: transparent;
+        border-top: 1px solid #ddd;
+    }
+    nav .drop-down li:hover i {
+        transform: rotate(-90deg);
+    }
+    .banner {
+        background-position: center;
+    }
+    .banner-data {
+        max-width: 760px;
+        width: 100%;
+    }
+    .banner h1 {
+        font-size: 20px;
+    }
+    .personal-injury .injury-row {
+        flex-direction: row;
+        row-gap: 0;
+    }
+    .personal-injury .container {
+        max-width: 100%;
+        padding-left: 100px;
+    }
+    .banner .default-para {
+        text-align: center;
+    }
+    .injury-data {
+        max-width: 535px;
+    }
+    .services .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .services .services-card {
+        max-width: 228px;
+        padding: 0;
+    }
+    .card-image {
+        margin-bottom: 35px;
+        margin-bottom: 65px;
+        max-width: 228px;
+        height: 105px;
+    }
+    .services::after {
+        content: "";
+        position: absolute;
+        border: 1px solid #E4E8EA;
+        top: 34%;
+        left: 0;
+        right: 0;
+        display: block;
+        z-index: -1;
+    }
+    .services-card .default-para::after {
+        content: "";
+        position: absolute;
+        border: 1px solid #808285;
+        width: 25px;
+        top: -35px;
+        rotate: 90deg;
+        left: 50%;
+        right: 0;
+        z-index: 1;
+        transform: translate(10px, 10px);
+        display: block;
+    }
+    .default-heading {
+        font-size: 35px;
+        padding: 0;
+    }
+    .practice-area .container::after {
+        content: "";
+        position: absolute;
+        border: 1px solid #FEFCF8;
+        width: 100%;
+        opacity: 50%;
+        display: none;
+    }
+    .practice-area .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        row-gap: 15px;
+        position: relative;
+    }
+    .help-section {
+        padding: 65px 27px 65px 45px;
+    }
+    .attorneyLaw {
+        position: absolute;
+        bottom: -16%;
+        /* right: 16%; */
+        right: 7%;
+        display: block;
+    }
+    .rotateImage .rotate {
+        animation: rotateImage 15s linear infinite;
+        margin: 20px;
+        filter: brightness(0.1);
+    }
+    .rotateImage {
+        display: inline-block;
+        position: relative;
+    }
+    .fixedImage {
+        position: absolute;
+        right: 60px;
+        top: 66px;
+    }
+    .help-section .quote-snippet {
+        border-left: 2px solid #dddd;
+        padding-left: 10px;
+    }
+    .help-info::after {
+        content: "";
+        transform: rotate(-3deg);
+    }
+}
+
+/****** 1280px ***********************************/
+@media screen and (min-width:1280px) {
+    .logo {
+        max-width: 263px;
+    }
+    .container {
+        padding: 0;
+    }
+    nav {
+        max-width: 755px;
+    }
+    nav ul li a {
+        font-size: 18px;
+    }
+    header .phone {
+        font-size: 24px;
+        padding: 10px 0 10px 30px;
+    }
+    .bannner-info{
+        padding-left: 64px;
+    }
+    .banner .lawyers {
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+    .personal-injury .injury-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .animated-image {
+        top: -122px;
+        max-width: 580px;
+    }
+    .personal-injury .container {
+        max-width: 100%;
+        padding-left: 140px;
+    }
+    .personal-injury .default-para:not(:last-child) {
+        margin: 30px 0 50px 0;
+    }
+    .banner h1 {
+        font-size: 24px;
+    }
+    .banner .default-para {
+        margin-bottom: 30px;
+    }
+    .default-btn {
+        font-size: 16px;
+        margin: 0 auto;
+    }
+    .banner .legalAction {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+    .banner .legalAction {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+    .default-para {
+        font-size: 16px;
+    }
+    .practice-card {
+        max-width: 245px;
+        padding: 0;
+    }
+    .default-heading {
+        font-size: 46px;
+    }
+    .practice-area .container::after {
+        content: "";
+        position: absolute;
+        border: 1px solid #FEFCF8;
+        width: 100%;
+        opacity: 50%;
+        display: block;
+    }
+    .practice-area .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        row-gap: 85px;
+        position: relative;
+    }
+    .services .services-card {
+        max-width: 228px;
+        padding: 0;
+    }
+}
+
+@media screen and (min-width:1370px){
+    .injury-data {
+        max-width: 60%;
+    }
+    .injury-images {
+        width: 35%;
+    }
+    .injury-thumbnail,
+    .animated-image {
+        max-width: 100%;
+    }
+}
